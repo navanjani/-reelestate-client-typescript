@@ -2,9 +2,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
-import { FC } from "react";
 
-const Navigation: FC = () => {
+export default function Navigation() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -29,6 +28,4 @@ const Navigation: FC = () => {
       </Container>
     </Navbar>
   );
-};
-
-export default Navigation;
+}

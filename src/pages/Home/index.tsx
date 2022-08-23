@@ -1,8 +1,29 @@
-import { Container } from "react-bootstrap";
-import { FC } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import ButtonComponent from "../../components/ButtonComponent";
+import { ABOUT_US_ROUTE, LISTINGS_ROUTE } from "../../config/routes";
+import LanguageSelector from "../../components/LanguageSelector";
 
-const Home: FC = () => {
-  return <Container>Home</Container>;
-};
-
-export default Home;
+export default function Home() {
+  return (
+    <Container>
+      <Row>
+        <Col>
+          <NavLink to={LISTINGS_ROUTE}>
+            <ButtonComponent label="See Listings" />
+          </NavLink>
+        </Col>
+        <Col>
+          <NavLink to={`${ABOUT_US_ROUTE}/English`}>
+            <ButtonComponent label="About Us" />
+          </NavLink>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <LanguageSelector />
+        </Col>
+      </Row>
+    </Container>
+  );
+}

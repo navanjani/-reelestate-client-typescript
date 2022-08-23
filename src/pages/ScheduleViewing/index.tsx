@@ -1,7 +1,3 @@
-import { FC } from "react";
-
-const ScheduleViewing: FC = () => {
+export default function ScheduleViewing() {
   return <h1>Schedule Viewing</h1>;
-};
-
-export default ScheduleViewing;
+}
